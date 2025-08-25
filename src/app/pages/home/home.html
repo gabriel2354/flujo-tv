@@ -1,0 +1,265 @@
+<!-- NAV -->
+<section class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="assets/logo.webp" alt="Flujo TV" class="logo" />
+      <span>Flujo TV</span>
+    </div>
+
+    <nav class="menu">
+  
+      <a href="#comprar">Comprar</a>
+      <a href="#planes">Planes</a>
+      <a href="#caracteristicas">Características</a>
+      <a href="#trabaja">Trabaja con nosotros </a>
+    </nav>
+
+    
+  </div>
+</section>
+
+<!-- HERO CAROUSEL -->
+<header class="hero-carousel" id="home">
+  <div class="carousel">
+    <div class="slide active">
+      <img src="assets/imagen1.jpg" alt="Flujo TV en tu móvil" />
+    </div>
+    <div class="slide">
+      <img src="assets/imagen2.jpg" alt="Flujo TV en Smart TV" />
+    </div>
+    <div class="slide">
+      <img src="assets/imagen3.jpg" alt="Deportes en vivo" />
+    </div>
+
+    <!-- Overlay con texto -->
+    <div class="overlay">
+      <h1><span>APK FLUJO TV </span> </h1>
+      
+      <p class="lead">
+        Descarga <b>Flujo TV Apk v7.3.2</b> (la nueva versión de Magis TV).  
+        Instálala en Smart TV, Chromecast, Fire Stick, TV Box y PC.  
+        <strong>Versión Premium MOD APK</strong>
+      </p>
+       <h2 class="subtitle">Comprar Flujo TV</h2>
+      <div class="cta-row" id="descargar">
+        <a class="btn primary" download [href]="waLinkGeneral()" target="_blank" rel="noopener">
+      Descargar apk movil
+    </a>
+    <a class="btn primary" download [href]="waLinkdowloandtv()" target="_blank" rel="noopener">
+      Descargar apk tv
+    </a>
+       <a class="btn primary" [href]="waLinkGeneral()" target="_blank" rel="noopener" id="comprar">
+  <i class="fab fa-whatsapp"></i> Comprar
+</a>
+
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</header>
+
+<!-- PLANES -->
+<section class="plans" id="planes">
+  <div class="container">
+    <h2 class="section-title">Nuestros Planes</h2>
+    <div class="grid">
+      <article class="card" *ngFor="let p of planes">
+        <div class="card-head">
+          <h3 class="plan-title">{{ p.titulo }}</h3>
+          <div class="plan-sub" *ngIf="p.subtitulo">{{ p.subtitulo }}</div>
+          <div class="badge" *ngIf="p.badge">{{ p.badge }}</div>
+          <div class="price">{{ p.precio }}</div>
+        </div>
+
+        <ul class="features">
+          <li *ngFor="let b of p.bullets">{{ b }}</li>
+        </ul>
+
+        <!-- ✅ usar waLinkPlan(p) para que el mensaje incluya el plan -->
+        <a 
+          class="btn primary" 
+          [href]="waLinkPlan(p)" 
+          target="_blank" 
+          rel="noopener"
+          id="comprar"
+        >
+          <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     🚀 CARACTERÍSTICAS
+============================= -->
+<section class="features-section" id="caracteristicas">
+
+  <div class="container">
+    <h2 class="section-title">Características <span>Destacadas</span></h2>
+    <p class="section-subtitle">
+      Algunas razones por las que Flujo TV es tu mejor opción.
+    </p>
+
+    <div class="features-grid">
+      <!-- Item -->
+      <div class="feature-card">
+        <i class="fas fa-tv icon"></i>
+        <h3>Selección de Canales</h3>
+        <p>
+          Más de <strong>1,300 canales</strong> en vivo de Latinoamérica, España y el mundo, 
+          organizados en categorías para que siempre encuentres lo que buscas.
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="feature-card">
+        <i class="fas fa-user-check icon"></i>
+        <h3>Experiencia Personalizada</h3>
+        <p>
+          Disfruta de <strong>guías de programas, horarios y favoritos</strong>, adaptados a tus preferencias de visualización.
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="feature-card">
+        <i class="fas fa-mobile-alt icon"></i>
+        <h3>Compatible con Todos tus Dispositivos</h3>
+        <p>
+          Disponible en <strong>Smart TV, TV Box, PC, Fire Stick y móviles</strong>, con soporte multidispositivo.
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="feature-card">
+        <i class="fas fa-headset icon"></i>
+        <h3>Soporte 24/7</h3>
+        <p>
+          Nuestro equipo está disponible <strong>todo el día, todos los días</strong>, para resolver cualquier inconveniente.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     🎬 DESCRIPCIÓN FLUJO TV
+============================= -->
+<section class="descripcion" id="descripcion">
+  <div class="container desc-inner">
+    
+    <!-- Bloque 1 -->
+    <div class="desc-block">
+      <div class="desc-text">
+        <h2 class="section-title">🔐 Login <span>Seguro</span></h2>
+        <p>
+          En <strong>Flujo TV</strong> tu seguridad es prioridad. Contamos con un sistema de 
+          <b>inicio de sesión cifrado</b> que protege tu cuenta y garantiza el acceso solo a ti.  
+          Nunca tendrás que preocuparte por tus datos, ya que todo está protegido con tecnología avanzada.
+        </p>
+      </div>
+      <div class="desc-image">
+        <img src="assets/ingreso.png" alt="Ingreso Seguro Flujo TV" class="img-desc">
+      </div>
+    </div>
+
+    <!-- Bloque 2 -->
+    <div class="desc-block reverse">
+      <div class="desc-text">
+        <h2 class="section-title">📺 Canales <span>En Vivo</span></h2>
+        <p>
+          Disfruta de más de <b>1,300 canales en vivo</b> de Latinoamérica, España y el mundo.  
+          Tendrás acceso a deportes, noticias, entretenimiento, infantiles y mucho más.  
+          Todo en <strong>alta calidad y sin interrupciones</strong>, disponible las 24 horas.
+        </p>
+      </div>
+      <div class="desc-image">
+        <img src="assets/pantalla_principal.png" alt="Pantalla Principal Flujo TV" class="img-desc">
+      </div>
+    </div>
+
+    <!-- Bloque 3 -->
+    <div class="desc-block">
+      <div class="desc-text">
+        <h2 class="section-title">🎬 Más de <span>10,000 Películas y Series</span></h2>
+        <p>
+          Accede a un catálogo completo con más de <b>10,000 títulos</b> de las plataformas más populares:  
+          <span class="highlight">Netflix, Disney+, HBO Max, Prime Video y muchas más</span>.  
+          Todo organizado en categorías y con estrenos actualizados cada semana.
+        </p>
+      </div>
+      <div class="desc-image">
+        <img src="assets/peliculas.png" alt="Películas Flujo TV" class="img-desc">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================
+     👔 TRABAJA CON NOSOTROS
+============================= -->
+<section class="careers" id="trabaja">
+  <div class="container careers-inner">
+
+    <!-- Texto -->
+    <div class="careers-text">
+      <h2 class="section-title">
+        Únete a nuestro <span>equipo de trabajo</span>
+      </h2>
+      <p class="section-subtitle">
+        Postúlate ahora como <strong>revendedor oficial de Flujo TV</strong> y sé parte de nuestro crecimiento.
+      </p>
+    </div>
+
+    <!-- Formulario -->
+   <form class="careers-form" (ngSubmit)="onSubmit(formRef)" #formRef="ngForm">
+
+      <div class="form-group">
+        <label for="name">Nombre completo</label>
+        <input type="text" id="name" name="name" ngModel required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" ngModel required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="4" ngModel required></textarea>
+      </div>
+
+      <button type="submit" class="btn primary">Enviar</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- ============================
+     ⚫ FOOTER
+============================ -->
+<footer class="foot">
+  <div class="container foot-inner">
+    
+    <!-- Columna izquierda -->
+    <div class="brand-foot">
+     
+      <span>Flujo TV</span>
+      <small>© {{ currentYear }} — Todos los derechos reservados.</small>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="links">
+      <a href="/politica-privacidad">Política de Privacidad</a>
+      <a href="/terminos">Términos y Condiciones</a>
+      <a [href]="waLinkGeneral()" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> Soporte WhatsApp
+      </a>
+    </div>
+  </div>
+</footer>
