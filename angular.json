@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/flujo-tv-landing",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -32,14 +33,14 @@
             "production": {
               "budgets": [
                 {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                 "type": "initial",
+    "maximumWarning": "500kB",
+    "maximumError": "1MB"
                 },
                 {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                 "type": "anyComponentStyle",
+    "maximumWarning": "200kB",
+    "maximumError": "400kB"
                 }
               ],
               "outputHashing": "all"
