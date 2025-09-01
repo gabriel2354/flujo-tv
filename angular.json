@@ -19,15 +19,26 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-                  "src/favicon.ico",
-                  "src/assets",
-               {
-                 "glob": "google1bb8736ae5684540.html",
-                 "input": "src/assets",
-                "output": "/"
-            }
-  ],
+           "assets": [
+  "src/favicon.ico",
+  "src/assets",
+  {
+    "glob": "robots.txt",
+    "input": "src",
+    "output": "/"
+  },
+  {
+    "glob": "sitemap.xml",
+    "input": "src",
+    "output": "/"
+  },
+  {
+    "glob": "google1bb8736ae5684540.html",
+    "input": "src/assets",
+    "output": "/"
+  }
+],
+
             "styles": [
               "src/styles.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
